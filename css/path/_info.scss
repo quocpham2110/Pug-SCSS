@@ -1,0 +1,86 @@
+// Variables
+$bg-header: #1b192a;
+$text-header: #cbd3dc;
+
+$blue: #3464e0;
+$blue-hover: #1240b8;
+$blue-light: #edf4ff;
+
+$text-menu: #111;
+
+$title: #333;
+$detail: #777;
+$content: #666;
+$content-w: white;
+
+$gradient: linear-gradient(to right, #3464e0, #9214f4);
+$shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.1);
+
+$footer: #10232f;
+$border-footer: #283546;
+
+$bps: (
+  "xl": 1200px,
+  "lg": 992px,
+  "md": 768px,
+  "sm": 576px,
+) !default;
+// Grid of Container
+@mixin grid-C($temp: repeat(12, 1fr),$justify: space-between,$align: stretch) {
+  display: grid;
+  grid-template-columns: $temp;
+  justify-content: $justify;
+  align-content: $align;
+}
+// Grid of Items
+@mixin grid-I($start, $end) {
+  grid-column: $start / $end;
+}
+// Flex
+@mixin flex($justify: center, $algin: center, $dir: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $algin;
+  flex-direction: $dir;
+  flex-wrap: wrap;
+}
+// Animation
+@mixin animate(
+  $name,
+  $time,
+  $count: infinite,
+  $dir: normal,
+  $func: linear,
+  $mode: forwards
+) {
+  animation: {
+    name: $name;
+    duration: $time;
+    iteration-count: $count;
+    direction: $dir;
+    timing-function: $func;
+    fill-mode: $mode;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+@mixin frame($visible, $opacity) {
+  visibility: $visible;
+  opacity: $opacity;
+}
+// Breakpoint animation
+@mixin res($bp,$m: min) {
+  // If the key exists in the map
+  @if map-has-key($bps, $bp) {
+    // Prints a media query based on the value
+      @media (#{$m}-width: map-get($bps, $bp)) {
+        @content;
+      }
+    }
+  // If the key doesn't exist in the map
+  @else {
+    @warn "There no `#{$bp}`"
+          + "Available breakpoints are: #{map-keys($bps)}.";
+  }
+}

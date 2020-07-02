@@ -1,0 +1,95 @@
+@use "info";
+
+.footer {
+  padding: 8rem 0 2.5rem;
+  background-color: info.$footer;
+  color: info.$content-w;
+  &__top {
+    padding-bottom: 5rem;
+    border-bottom: 0.1rem solid info.$border-footer;
+    @include info.grid-C(repeat(4, 1fr));
+    &--col {
+      padding: 0 1.5rem 3rem;
+      text-align: left;
+    }
+    &--header {
+      margin-bottom: 2.5rem;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.1rem;
+      line-height: 1.2;
+    }
+    &--items {
+      margin-bottom: 0.8rem;
+    }
+    &--link {
+      font-size: 1.4rem;
+      color: info.$content-w;
+      transition: 0.3s;
+      &:hover {
+        color: info.$blue;
+      }
+    }
+  }
+  &__logo {
+    margin-bottom: 1.5rem;
+    width: 14.5rem;
+    display: inline-block;
+    &--detail {
+      margin-bottom: 2.9rem;
+      line-height: 2.7rem;
+    }
+  }
+  &__media {
+    &--items {
+      display: inline-block;
+      position: relative;
+      margin-bottom: 0.8rem;
+    }
+    &--link {
+      display: inline-block;
+      $wh: 3.5rem;
+      width: $wh;
+      height: $wh;
+      line-height: $wh;
+      border: solid 0.1rem info.$content-w;
+      border-radius: 50%;
+      color: info.$content-w;
+      font-size: 1.4rem;
+      text-align: center;
+      margin-right: 0.7rem;
+      transition: 0.3s;
+      &:hover {
+        border-color: info.$blue;
+        background-color: info.$blue;
+      }
+    }
+  }
+  &__icon {
+    position: relative;
+    margin-bottom: 1.5rem;
+    &--img {
+      position: absolute;
+      color: info.$blue;
+      font-size: 2.2rem;
+      top: 0.3rem;
+    }
+    &--detail {
+      padding-left: 3.5rem;
+    }
+  }
+  &__bot {
+    text-align: center;
+    padding-top: 2.5rem;
+    &--content {
+      color: info.$content-w;
+      a {
+        transition: 0.4s;
+        color: info.$content-w;
+        &:hover {
+          color: info.$blue;
+        }
+      }
+    }
+  }
+}

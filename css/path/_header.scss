@@ -1,0 +1,49 @@
+@use "info";
+
+.header {
+  background-color: info.$bg-header;
+  color: info.$text-header;
+  padding: 2rem 0;
+  &__inner {
+    @include info.grid-C(1fr);
+    @include info.res("md") {
+      @include info.grid-C(7fr 5fr);
+    }
+    @include info.res("lg") {
+      @include info.grid-C(1fr 1fr);
+    }
+  }
+  &__left {
+    @include info.flex;
+    @include info.res("md") {
+      @include info.flex(flex-start);
+    }
+  }
+  &__right {
+    @include info.flex;
+    @include info.res("md") {
+      @include info.flex(flex-end);
+    }
+  }
+  &__items {
+    [class$="left"] & {
+      margin-right: 1.5rem;
+    }
+    [class$="right"] & {
+      margin-left: 1.5rem;
+    }
+  }
+  &__icon {
+    color: info.$blue;
+    margin-right: 0.5rem;
+  }
+  &__text {
+    color: info.$text-header;
+    transition: {
+      duration: 0.5s;
+    }
+    &:hover {
+      color: info.$blue;
+    }
+  }
+}

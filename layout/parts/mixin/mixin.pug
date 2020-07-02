@@ -1,0 +1,124 @@
+//- section header
+mixin section__header(title, detail)
+  .section__header
+    h2.section__header--title= title
+    p.section__header--detail= detail
+//- menu header
+mixin menu(val)
+  li.nav__menu--items
+    case val
+      when "Hosting"
+        a(class="nav__menu--link nav__sub" href="#")= val
+        +sub(0)
+      when "Page"
+        a(class="nav__menu--link nav__sub" href="#")= val
+        +sub(1)
+      when "Blog"
+        a(class="nav__menu--link nav__sub" href="#")= val
+        +sub(2)
+      default
+        a(class="nav__menu--link" href="#")= val
+//- sub-menu
+mixin sub(i)
+  -const subContent = [['Shared Hosting', 'Dedicated Hosting', 'Cloud Hosting', 'VPS Hosting'],['About', 'Testimonials', 'Coming Soon', 'FAQ', '404'], ["Blog Details"]];
+  ul.nav__sub--list
+    each elem in subContent[i]
+      li.nav__sub--items 
+        a(href="#").nav__sub--link= elem
+//- slider
+mixin slider(h1)
+  - const sliderh3 = "Up to 50% Off Starting from $ 2.50/Month";
+  - const slidera = "Get Started";
+  - const sliderp = "It Is A Long Established Fact That A Reader Will Be Distracted By The Readable Content Of A Page When Looking At Its Layout. The Point Of Using Lorem Ipsum Is That It A More-Or-Less Normal Point."
+  .slider__text
+    h1.slider__text--title= h1
+    h3.slider__text--promote= sliderh3
+    p.slider__text--content= sliderp
+    a(href="#").slider__text--btn= slidera
+//- search
+mixin search(elements)
+  each elem in elements
+    li.search__domain--items
+      i.ti-check-box
+      span= elem
+//- about
+mixin about(img, h4, p)
+  aside.about__items
+    .about__box
+      img(src=`img/about/about${img}.png` alt="#").about__img
+    .about__text 
+      h4.about__header= h4
+      p.about__content= p
+//- partner
+mixin partner(elements)
+  each elem in elements
+    li.partner__items
+      a(href="#").partner__link
+        img(src=`img/partner/partner${elem}.png` alt="#").partner__img
+//- pricing
+mixin pricing(h4, price, li1,li2, li3, li4)
+  aside.pricing__content--col
+    .pricing__bg
+    .pricing__top
+      h4.pricing__top--header= h4
+      .pricing__top--price= price
+        span / Month
+    ul.pricing__list
+      li.pricing__items
+        strong= li1
+        | Website
+      li.pricing__items
+        strong= li2 + " GB "
+        | SSD Storage
+      li.pricing__items #[strong Unmetered] Bandwidth
+      li.pricing__items #[strong Free SSL] Certificate
+      li.pricing__items #[strong 1] Included Domain
+      li.pricing__items= li3 + " Parked "
+        strong Domains
+      li.pricing__items= li4 + " Sub "
+        strong Domains
+    a(href="#").pricing__btn.btn--blue Buy Now
+//- features
+mixin features(h3,p1,p2)
+  -const featuresLink = "Get Started Now"
+  .features__content
+    h3.features__title= h3
+    p.features__detail= p1
+    p.features__detail= p2
+    a(href="#").features__btn.btn--blue= featuresLink
+//- services
+mixin ser(img, title, detail)
+  .ser__items
+    .ser__icon
+      img(src=`img/service/sv${img}.png`, alt="").ser__icon--img
+    .ser__text
+      h5.ser__text--title= title
+      p.ser__text--detail= detail
+//- blog
+mixin blog(img, link, title, detail)
+  aside.blog__items
+    .blog__top
+      img(src=`img/blog/blog${img}.jpg` alt="")
+      a(href="#").blog__top--link= link
+    .blog__bot
+      h4
+        a.blog__bot--title= title
+      p.blog__bot--detail= detail
+//- media
+mixin media(medias)
+  each media in medias
+    li.footer__media--items
+      a(href="#").footer__media--link
+        i(class=`ti-${media}`)
+//- footer menu
+mixin footer-menu(menu)
+  each link in menu
+    li.footer__top--items
+      a(href="#").footer__top--link= link
+  //- each link in ['Web Hosting', 'Reseller Hosting', 'VPS Hosting', 'VPS Hosting', 'Dedicated Server']
+
+//- footer-icon
+mixin footer(icon, detail)
+  li.footer__icon
+    i(class=`ti-${icon} footer__icon--img`)
+    p.footer__icon--detail= detail

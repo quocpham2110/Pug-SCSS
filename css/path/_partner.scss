@@ -1,0 +1,46 @@
+@use "info";
+
+.partner {
+  margin-bottom: 10rem;
+  background-color: white;
+  &__inner {
+    position: relative;
+  }
+  &__nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    //
+    $pseudo: before, after;
+    @each $pseu in $pseudo {
+      &::#{$pseu} {
+        position: absolute;
+        top: 1rem;
+        font-family: "themify";
+        cursor: pointer;
+        color: #999;
+        vertical-align: middle;
+        transition: 0.3s;
+        @if $pseu == before {
+          content: "\e629";
+          left: 0;
+        }
+        @if $pseu == after {
+          content: "\e628";
+          right: 0;
+        }
+      }
+      &:hover::#{$pseu} {
+        color: #111;
+      }
+    }
+  }
+  &__list {
+    @include info.grid-C(repeat(5, 1fr));
+    text-align: center;
+  }
+  &__items {
+    margin: 0 1.5rem;
+  }
+}

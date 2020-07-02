@@ -1,0 +1,47 @@
+@use "info";
+
+.features {
+  padding-top: 10rem;
+  //
+  @each $p in top, bot {
+    &__#{$p} {
+      @include info.flex();
+      margin: 0 -1.5rem;
+      padding-bottom: 10rem;
+      &--bg {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 1.5rem;
+        @if $p == top {
+          padding-right: 7%;
+        }
+        @if $p == bot {
+          padding-left: 7%;
+        }
+        img {
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+  &__content {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 1.5rem;
+  }
+  &__title {
+    margin-bottom: 2.4rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    color: info.$title;
+    letter-spacing: 0.1rem;
+  }
+  &__detail {
+    margin-bottom: 1.6rem;
+    color: info.$content;
+  }
+  &__btn {
+    margin-top: 2.5rem;
+  }
+}

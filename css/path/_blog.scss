@@ -1,0 +1,57 @@
+@use "info";
+
+.blog {
+  padding: 10rem 0;
+  &__content {
+    @include info.grid-C(1fr 1fr 1fr);
+    grid-gap: 3rem;
+  }
+  &__items {
+    box-shadow: info.$shadow;
+    border-radius: 0.5rem;
+  }
+  &__top {
+    position: relative;
+    img {
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+    &--link {
+      position: absolute;
+      content: "";
+      clear: both;
+      bottom: 2rem;
+      left: 2rem;
+      border-radius: 0.3rem;
+      background-color: info.$content-w;
+      color: info.$blue;
+      display: inline-block;
+      padding: 0 1.4rem;
+      font-size: 1.4rem;
+      transition: 0.3s;
+      &:hover {
+        color: info.$text-menu;
+      }
+    }
+  }
+  &__bot {
+    padding: 3rem;
+    text-align: left;
+    h4 {
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1rem;
+    }
+    &--title {
+      color: info.$title;
+      transition: 0.3s;
+      &:hover {
+        color: info.$blue;
+      }
+    }
+    &--detail {
+        color: info.$detail;
+    }
+  }
+}

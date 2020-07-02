@@ -1,0 +1,24 @@
+$breakpoints: (
+  "small": 767px,
+  "medium": 992px,
+  "large": 1200px,
+) !default;
+@mixin res($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  // If the key doesn't exist in the map
+  @else {
+    @warn "There no `#{$breakpoint}`"
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+div {
+  @include res("small") {
+    color: blue;
+  }
+}

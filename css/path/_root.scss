@@ -1,0 +1,116 @@
+@use "info";
+// HTML
+html {
+  // @include info.res("sm",max) {
+  //   font-size: 45%;
+  // }
+  // @include info.res("sm") {
+  //   font-size: 50%;
+  // }
+  // @include info.res("md") {
+  //   font-size: 55%;
+  // }
+  // @include info.res("lg") {
+  //   font-size: 62.5%;
+  // }
+  font-size: 62.5%;
+}
+// Body
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+}
+// Defined container
+.container {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  @include info.res("sm", max) {
+    max-width: 540px;
+  }
+  @include info.res("sm") {
+    max-width: 540px;
+  }
+  @include info.res("md") {
+    max-width: 720px;
+  }
+  @include info.res("lg") {
+    max-width: 960px;
+  }
+  @include info.res("xl") {
+    max-width: 1140px;
+  }
+}
+// Modify <a>
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+// Modify button
+button,
+i,
+input {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+// Modify <img>
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
+}
+// Define section__header
+.section__header {
+  margin-bottom: 6rem;
+  &--title {
+    margin-top: 0;
+    margin-bottom: 1.4rem;
+    text-align: center;
+    color: info.$title;
+    font-size: 3.7rem;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: 0.1rem;
+  }
+  &--detail {
+    text-align: center;
+    color: info.$detail;
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+}
+// Gradient button
+.btn {
+  &--gradient {
+    display: inline-block;
+    border-radius: 0.5rem;
+    background-image: info.$gradient;
+    padding: 1.8rem 4rem;
+    color: info.$content-w;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: 0.3s;
+    &:hover {
+      color: info.$text-menu;
+    }
+  }
+  &--blue {
+    display: inline-block;
+    background: info.$blue none repeat scroll 0 0;
+    border-radius: 0.4rem;
+    box-shadow: info.$shadow;
+    color: info.$content-w;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.3s;
+    &:hover {
+      background: info.$blue-hover;
+    }
+  }
+}

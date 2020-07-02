@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pug & SCSS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/icon/themify-icons.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <div class="header__left">
+          <div class="header__items"><i class="ti-email header__icon"></i><a class="header__text" href="mailto:example@example.com"> example@example.com</a></div>
+          <div class="header__items"><i class="ti-mobile header__icon"></i><a class="header__text" href="tel:+5192964292"> +1 519-296-4292</a></div>
+        </div>
+        <div class="header__right">
+          <div class="header__items"><i class="ti-user header__icon"></i><a class="header__text" href="#"> Register</a></div>
+          <div class="header__items"><i class="ti-share header__icon"></i><a class="header__text" href="#"> Login</a></div>
+          <div class="header__items"><i class="ti-headphone-alt header__icon"></i><a class="header__text" href="#"> Live Chat</a></div>
+        </div>
+      </div>
+    </header>
+    <nav class="nav">
+      <div class="container nav__inner"><a class="nav__logo"><img class="nav__logo--img" src="img/logo/logo1.png" alt="Top Logo"></a>
+        <ul class="nav__menu">
+              <li class="nav__menu--items"><a class="nav__menu--link" href="#">Home</a>
+              </li>
+              <li class="nav__menu--items"><a class="nav__menu--link nav__sub" href="#">Hosting</a>
+                    <ul class="nav__sub--list">
+                      <li class="nav__sub--items"> <a class="nav__sub--link" href="#">Shared Hosting</a></li>
+                      <li class="nav__sub--items"> <a class="nav__sub--link" href="#">Dedicated Hosting</a></li>
+                      <li class="nav__sub--items"> <a class="nav__sub--link" href="#">Cloud Hosting</a></li>
+                      <li class="nav__sub--items"> <a class="nav__sub--link" href="#">VPS Hosting</a></li>
+                    </ul>
+              </li>
+              <li class="nav__menu--items"><a class="nav__menu--link nav__sub" href="#">Page</a>
+                    <ul class="nav__sub--list">
+                      <li class="nav__sub--items"> <a class="nav__sub--link" href="#">About</a></li>
+                      <li class="nav__sub--items"> <a class="nav__sub--link" href="#">Testimonials</a></li>
+                      <li class="nav__sub--items"> <a class="nav__sub--link" href="#">Coming Soon</a></li>
+                      <li class="nav__sub--items"> <a class="nav__sub--link" href="#">FAQ</a></li>
+                      <li class="nav__sub--items"> <a class="nav__sub--link" href="#">404</a></li>
+                    </ul>
+              </li>
+              <li class="nav__menu--items"><a class="nav__menu--link nav__sub" href="#">Blog</a>
+                    <ul class="nav__sub--list">
+                      <li class="nav__sub--items"> <a class="nav__sub--link" href="#">Blog Details</a></li>
+                    </ul>
+              </li>
+              <li class="nav__menu--items"><a class="nav__menu--link" href="#">Contact Us</a>
+              </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="slider">
+      <div class="slider__bg"></div>
+      <div class="slider__nav">
+        <div class="slider__nav--left"><i class="ti-arrow-left"></i></div>
+        <div class="slider__nav--right"><i class="ti-arrow-right"></i></div>
+      </div>
+      <div class="container slider__inner">
+        <div class="slider__1">
+          <div class="slider__bg1"><img src="img/slider/slider1.png" alt="" srcset=""></div>
+              <div class="slider__text">
+                <h1 class="slider__text--title">Powerful Hosting Services</h1>
+                <h3 class="slider__text--promote">Up to 50% Off Starting from $ 2.50/Month</h3>
+                <p class="slider__text--content">It Is A Long Established Fact That A Reader Will Be Distracted By The Readable Content Of A Page When Looking At Its Layout. The Point Of Using Lorem Ipsum Is That It A More-Or-Less Normal Point.</p><a class="slider__text--btn" href="#">Get Started</a>
+              </div>
+        </div>
+        <div class="slider__2">
+              <div class="slider__text">
+                <h1 class="slider__text--title">WordPress Hosting Plan</h1>
+                <h3 class="slider__text--promote">Up to 50% Off Starting from $ 2.50/Month</h3>
+                <p class="slider__text--content">It Is A Long Established Fact That A Reader Will Be Distracted By The Readable Content Of A Page When Looking At Its Layout. The Point Of Using Lorem Ipsum Is That It A More-Or-Less Normal Point.</p><a class="slider__text--btn" href="#">Get Started</a>
+              </div>
+          <div class="slider__bg2"><img src="img/slider/slider2.png" alt="" srcset=""></div>
+        </div>
+      </div>
+    </section>
+    <section class="search">
+      <div class="container search__inner">
+            <div class="section__header">
+              <h2 class="section__header--title">Search Domain</h2>
+              <p class="section__header--detail">You Can Get Very Cheap And Special Domain Name</p>
+            </div>
+        <div class="search__box">
+          <form class="search__form" action="#" method="POST">
+            <input class="search__form--input" type="text" placeholder="Enter your domain name here">
+            <button class="search__btn btn--gradient">Search<i class="ti-search"></i></button>
+          </form>
+          <ul class="search__domain">
+                <li class="search__domain--items"><i class="ti-check-box"></i><span> .com $1.99</span></li>
+                <li class="search__domain--items"><i class="ti-check-box"></i><span> .net $1.70</span></li>
+                <li class="search__domain--items"><i class="ti-check-box"></i><span> .org $5.00</span></li>
+                <li class="search__domain--items"><i class="ti-check-box"></i><span> .info $1.60</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="container about__inner">
+            <aside class="about__items">
+              <div class="about__box"><img class="about__img" src="img/about/about1.png" alt="#"></div>
+              <div class="about__text"> 
+                <h4 class="about__header">High Security</h4>
+                <p class="about__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa itaque</p>
+              </div>
+            </aside>
+            <aside class="about__items">
+              <div class="about__box"><img class="about__img" src="img/about/about2.png" alt="#"></div>
+              <div class="about__text"> 
+                <h4 class="about__header">Free Domain</h4>
+                <p class="about__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa itaque</p>
+              </div>
+            </aside>
+            <aside class="about__items">
+              <div class="about__box"><img class="about__img" src="img/about/about3.png" alt="#"></div>
+              <div class="about__text"> 
+                <h4 class="about__header">99.9% Uptime</h4>
+                <p class="about__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa itaque</p>
+              </div>
+            </aside>
+      </div>
+    </section>
+    <section class="partner">
+      <div class="container partner__inner">
+        <div class="partner__nav"></div>
+        <ul class="partner__list">
+              <li class="partner__items"><a class="partner__link" href="#"><img class="partner__img" src="img/partner/partner1.png" alt="#"></a></li>
+              <li class="partner__items"><a class="partner__link" href="#"><img class="partner__img" src="img/partner/partner2.png" alt="#"></a></li>
+              <li class="partner__items"><a class="partner__link" href="#"><img class="partner__img" src="img/partner/partner3.png" alt="#"></a></li>
+              <li class="partner__items"><a class="partner__link" href="#"><img class="partner__img" src="img/partner/partner4.png" alt="#"></a></li>
+              <li class="partner__items"><a class="partner__link" href="#"><img class="partner__img" src="img/partner/partner5.png" alt="#"></a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="pricing">
+      <div class="container">
+            <div class="section__header">
+              <h2 class="section__header--title">Our Web Hosting</h2>
+              <p class="section__header--detail">Web Hosting Made EASY And AFFORDABLE</p>
+            </div>
+        <div class="pricing__tab"><span class="pricing__tab--text">Monthly</span>
+          <label class="pricing__toggle">
+            <input class="pricing__input" type="checkbox"><span class="pricing__slider"></span>
+          </label><span class="pricing__tab--text">Annual</span>
+        </div>
+        <div class="pricing__content">
+              <aside class="pricing__content--col">
+                <div class="pricing__bg"></div>
+                <div class="pricing__top">
+                  <h4 class="pricing__top--header">BASIC</h4>
+                  <div class="pricing__top--price">$2.95 <span>/ Month</span></div>
+                </div>
+                <ul class="pricing__list">
+                  <li class="pricing__items"><strong>1 </strong>Website</li>
+                  <li class="pricing__items"><strong>50  GB </strong>SSD Storage</li>
+                  <li class="pricing__items"><strong>Unmetered</strong> Bandwidth</li>
+                  <li class="pricing__items"><strong>Free SSL</strong> Certificate</li>
+                  <li class="pricing__items"><strong>1</strong> Included Domain</li>
+                  <li class="pricing__items">5 Parked <strong>Domains</strong></li>
+                  <li class="pricing__items">25 Sub <strong>Domains</strong></li>
+                </ul><a class="pricing__btn btn--blue" href="#">Buy Now</a>
+              </aside>
+              <aside class="pricing__content--col">
+                <div class="pricing__bg"></div>
+                <div class="pricing__top">
+                  <h4 class="pricing__top--header">PLUS</h4>
+                  <div class="pricing__top--price">$5.95 <span>/ Month</span></div>
+                </div>
+                <ul class="pricing__list">
+                  <li class="pricing__items"><strong>30 </strong>Website</li>
+                  <li class="pricing__items"><strong>250  GB </strong>SSD Storage</li>
+                  <li class="pricing__items"><strong>Unmetered</strong> Bandwidth</li>
+                  <li class="pricing__items"><strong>Free SSL</strong> Certificate</li>
+                  <li class="pricing__items"><strong>1</strong> Included Domain</li>
+                  <li class="pricing__items">20 Parked <strong>Domains</strong></li>
+                  <li class="pricing__items">100 Sub <strong>Domains</strong></li>
+                </ul><a class="pricing__btn btn--blue" href="#">Buy Now</a>
+              </aside>
+              <aside class="pricing__content--col">
+                <div class="pricing__bg"></div>
+                <div class="pricing__top">
+                  <h4 class="pricing__top--header">PREMIUM</h4>
+                  <div class="pricing__top--price">$13.95 <span>/ Month</span></div>
+                </div>
+                <ul class="pricing__list">
+                  <li class="pricing__items"><strong>Unlimited </strong>Website</li>
+                  <li class="pricing__items"><strong>500  GB </strong>SSD Storage</li>
+                  <li class="pricing__items"><strong>Unmetered</strong> Bandwidth</li>
+                  <li class="pricing__items"><strong>Free SSL</strong> Certificate</li>
+                  <li class="pricing__items"><strong>1</strong> Included Domain</li>
+                  <li class="pricing__items">30 Parked <strong>Domains</strong></li>
+                  <li class="pricing__items">250 Sub <strong>Domains</strong></li>
+                </ul><a class="pricing__btn btn--blue" href="#">Buy Now</a>
+              </aside>
+        </div>
+      </div>
+    </section>
+    <section class="order">
+      <div class="container order__inner">
+        <h2 class="order__left">Start your Unlimited Hosting Today!</h2>
+        <div class="order__right"><span class="order__text">Starting at only <span>$8.99</span> / month</span><a class="order__btn btn--blue" href="#">Order Now</a></div>
+      </div>
+    </section>
+    <section class="features">
+      <div class="container">
+        <div class="features__top">
+          <div class="features__top--bg"><img src="img/fea/fea1.png" alt="#"></div>
+              <div class="features__content">
+                <h3 class="features__title">Start Your Website Now!</h3>
+                <p class="features__detail">SmartHost web hosting provides a vast array of tools to take your idea or business online today. From site building tools and templates, to our one-click application installer, you'll find everything you need to launch your new website. Got questions? Our 24/7 Live Support team is here to help!</p>
+                <p class="features__detail">99.98 server uptime with better cloud hosting adipisicing elit, sed do eiumod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p><a class="features__btn btn--blue" href="#">Get Started Now</a>
+              </div>
+        </div>
+        <div class="features__bot">
+              <div class="features__content">
+                <h3 class="features__title">Get Started Quickly &amp; Easily</h3>
+                <p class="features__detail">For example, our own Website Builder provides an incredibly convenient drag-and-drop building experience. You can choose from a wide selection of themes, and even pre-built sections, to craft your own amazing website and publish it in no time!</p>
+                <p class="features__detail">99.98 server uptime with better cloud hosting adipisicing elit, sed do eiumod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p><a class="features__btn btn--blue" href="#">Get Started Now</a>
+              </div>
+          <div class="features__bot--bg"><img src="img/fea/fea2.png" alt="#"></div>
+        </div>
+      </div>
+    </section>
+    <section class="ser">
+      <div class="container ser__inner">
+            <div class="section__header">
+              <h2 class="section__header--title">Our Services</h2>
+              <p class="section__header--detail">We Provide Many Services</p>
+            </div>
+        <div class="ser__container">
+              <div class="ser__items">
+                <div class="ser__icon"><img class="ser__icon--img" src="img/service/sv1.png" alt=""></div>
+                <div class="ser__text">
+                  <h5 class="ser__text--title">Resellers Hosting</h5>
+                  <p class="ser__text--detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+              </div>
+              <div class="ser__items">
+                <div class="ser__icon"><img class="ser__icon--img" src="img/service/sv2.png" alt=""></div>
+                <div class="ser__text">
+                  <h5 class="ser__text--title">Shared Hosting</h5>
+                  <p class="ser__text--detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+              </div>
+              <div class="ser__items">
+                <div class="ser__icon"><img class="ser__icon--img" src="img/service/sv3.png" alt=""></div>
+                <div class="ser__text">
+                  <h5 class="ser__text--title">Dedicated Hosting</h5>
+                  <p class="ser__text--detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+              </div>
+              <div class="ser__items">
+                <div class="ser__icon"><img class="ser__icon--img" src="img/service/sv4.png" alt=""></div>
+                <div class="ser__text">
+                  <h5 class="ser__text--title">Cloud Hosting</h5>
+                  <p class="ser__text--detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+              </div>
+              <div class="ser__items">
+                <div class="ser__icon"><img class="ser__icon--img" src="img/service/sv5.png" alt=""></div>
+                <div class="ser__text">
+                  <h5 class="ser__text--title">Data Transfer</h5>
+                  <p class="ser__text--detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+              </div>
+              <div class="ser__items">
+                <div class="ser__icon"><img class="ser__icon--img" src="img/service/sv6.png" alt=""></div>
+                <div class="ser__text">
+                  <h5 class="ser__text--title">Domain Sale</h5>
+                  <p class="ser__text--detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+    <section class="tes">
+      <div class="container">
+            <div class="section__header">
+              <h2 class="section__header--title">Client Says</h2>
+              <p class="section__header--detail">We Respect Our Customers Opinions</p>
+            </div>
+        <div class="tes__content">
+          <div class="tes__arrow"><i class="ti-arrow-left"></i></div>
+          <div class="tes__box"><img class="tes__ava" src="img/tes/tes1.jpg" alt="">
+            <p class="tes__detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis risus vel leo molestie hendrerit sed sed mi. Vestibulum in consequat orci. Nam auctor, eros eu aliquam semper nisl erat tristique massa sit amet</p><img src="img/star.png" alt="#"><img src="img/star.png" alt="#"><img src="img/star.png" alt="#"><img src="img/star.png" alt="#"><img src="img/star.png" alt="#">
+            <h5 class="tes__name">Margaret Robinson</h5>
+          </div>
+          <div class="tes__arrow"><i class="ti-arrow-right"></i></div>
+        </div>
+      </div>
+    </section>
+    <section class="blog">
+      <div class="container">
+            <div class="section__header">
+              <h2 class="section__header--title">Blog</h2>
+              <p class="section__header--detail">Get Our Latest Posts</p>
+            </div>
+        <div class="blog__content">
+              <aside class="blog__items">
+                <div class="blog__top"><img src="img/blog/blog1.jpg" alt=""><a class="blog__top--link" href="#">Domain</a></div>
+                <div class="blog__bot">
+                  <h4><a class="blog__bot--title">50 Best Web Hosting Company</a></h4>
+                  <p class="blog__bot--detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lobortis tincidunt nulla, nec venenatis neque</p>
+                </div>
+              </aside>
+              <aside class="blog__items">
+                <div class="blog__top"><img src="img/blog/blog2.jpg" alt=""><a class="blog__top--link" href="#">Hosting</a></div>
+                <div class="blog__bot">
+                  <h4><a class="blog__bot--title">50 Best Web Hosting Company</a></h4>
+                  <p class="blog__bot--detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lobortis tincidunt nulla, nec venenatis neque</p>
+                </div>
+              </aside>
+              <aside class="blog__items">
+                <div class="blog__top"><img src="img/blog/blog3.jpg" alt=""><a class="blog__top--link" href="#">Trending</a></div>
+                <div class="blog__bot">
+                  <h4><a class="blog__bot--title">50 Best Web Hosting Company</a></h4>
+                  <p class="blog__bot--detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lobortis tincidunt nulla, nec venenatis neque</p>
+                </div>
+              </aside>
+        </div>
+      </div>
+    </section>
+    <section class="pro">
+      <div class="pro__bg"></div>
+      <div class="container">
+        <div class="pro__inner">
+          <h2 class="pro__title">24/7 Expert Support</h2>
+          <p class="pro__detail">Our in-house, expert team is always on hand to help answer your questions, get you started, and grow your presence online. You can call, chat or email us any time!</p><a class="btn--gradient" href="#">Need Help?</a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <aside class="footer__top--col"><a class="footer__logo" href="#"><img class="footer__logo--img" src="img/logo/logo2.png" alt=""></a>
+            <p class="footer__logo--detail">SmartHost is a leading web hosting solutions company. Since our founding in 2019, SmartHost has continually innovated.</p>
+            <ul class="footer__media">
+                  <li class="footer__media--items"><a class="footer__media--link" href="#"><i class="ti-facebook"></i></a></li>
+                  <li class="footer__media--items"><a class="footer__media--link" href="#"><i class="ti-twitter-alt"></i></a></li>
+                  <li class="footer__media--items"><a class="footer__media--link" href="#"><i class="ti-linkedin"></i></a></li>
+                  <li class="footer__media--items"><a class="footer__media--link" href="#"><i class="ti-pinterest-alt"></i></a></li>
+            </ul>
+          </aside>
+          <aside class="footer__top--col">
+            <div class="footer__top--header">Useful Links</div>
+            <ul>
+                  <li class="footer__top--items"><a class="footer__top--link" href="#">Support</a></li>
+                  <li class="footer__top--items"><a class="footer__top--link" href="#">Affiliate</a></li>
+                  <li class="footer__top--items"><a class="footer__top--link" href="#">Register Domains</a></li>
+                  <li class="footer__top--items"><a class="footer__top--link" href="#">My Account</a></li>
+                  <li class="footer__top--items"><a class="footer__top--link" href="#">Privacy Policy</a></li>
+            </ul>
+          </aside>
+          <aside class="footer__top--col">
+            <div class="footer__top--header">Services</div>
+            <ul>
+                  <li class="footer__top--items"><a class="footer__top--link" href="#">Web Hosting</a></li>
+                  <li class="footer__top--items"><a class="footer__top--link" href="#">Reseller Hosting</a></li>
+                  <li class="footer__top--items"><a class="footer__top--link" href="#">VPS Hosting</a></li>
+                  <li class="footer__top--items"><a class="footer__top--link" href="#">VPS Hosting</a></li>
+                  <li class="footer__top--items"><a class="footer__top--link" href="#">Dedicated Server</a></li>
+            </ul>
+          </aside>
+          <aside class="footer__top--col">
+            <div class="footer__top--header">Contact Us</div>
+            <ul>
+                  <li class="footer__icon"><i class="ti-location-pin footer__icon--img"></i>
+                    <p class="footer__icon--detail">18D, SmartHost hosting, New York, United States - NY</p>
+                  </li>
+                  <li class="footer__icon"><i class="ti-email footer__icon--img"></i>
+                    <p class="footer__icon--detail">your@email.com</p>
+                  </li>
+                  <li class="footer__icon"><i class="ti-headphone footer__icon--img"></i>
+                    <p class="footer__icon--detail">(+2) 908 4469 9031</p>
+                  </li>
+            </ul>
+          </aside>
+        </div>
+        <div class="footer__bot">
+          <p class="footer__bot--content">Copyright © 2019 <a href="#">SmartHost</a>, All Rights Reserved.<br>Created by Themes_Vila</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

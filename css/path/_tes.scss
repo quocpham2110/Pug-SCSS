@@ -1,0 +1,71 @@
+@use "info";
+
+.tes {
+  &__content {
+    @include info.flex();
+  }
+  &__arrow {
+    flex: 15%;
+    text-align: center;
+    @each $pos in left, right {
+      .ti-arrow-#{$pos} {
+        display: inline-block;
+        $wh: 5rem;
+        width: $wh;
+        height: $wh;
+        border: solid 0.1rem info.$blue;
+        border-radius: 50%;
+        color: info.$blue;
+        line-height: $wh;
+        font-size: 1.8rem;
+        transition: 0.3s;
+        &:hover {
+          background-color: info.$blue;
+          color: info.$content-w;
+        }
+      }
+    }
+  }
+  &__box {
+    flex: 70%;
+    box-shadow: info.$shadow;
+    border-radius: 1rem;
+    padding: 4%;
+    text-align: center;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "\e67f";
+      font-family: "themify";
+      font-weight: 700;
+      font-size: 3rem;
+      color: info.$content-w;
+      top: -2rem;
+      left: 2rem;
+      width: 7rem;
+      height: 7rem;
+      line-height: 7rem;
+      background-image: info.$gradient;
+      border-radius: 50%;
+    }
+  }
+  &__ava {
+    width: 8rem;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: info.$shadow;
+    margin-top: 2rem;
+  }
+  &__detail {
+    margin: 2rem 0 1.5rem;
+    font-size: 1.6rem;
+    color: info.$content;
+  }
+  &__name {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: info.$title;
+    letter-spacing: 0.2rem;
+  }
+}

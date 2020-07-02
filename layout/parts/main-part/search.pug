@@ -1,0 +1,10 @@
+section.search
+  .container.search__inner
+    +section__header('Search Domain', 'You Can Get Very Cheap And Special Domain Name')   
+    .search__box
+      form(action="#" method="POST").search__form
+        input(type="text" placeholder="Enter your domain name here").search__form--input
+        button.search__btn.btn--gradient Search
+          i.ti-search
+      ul.search__domain
+        +search([' .com $1.99', ' .net $1.70', ' .org $5.00', ' .info $1.60'])

@@ -1,0 +1,13 @@
+section.pricing
+  .container
+    +section__header('Our Web Hosting','Web Hosting Made EASY And AFFORDABLE')
+    .pricing__tab
+      span.pricing__tab--text Monthly
+      label.pricing__toggle
+        input(type="checkbox").pricing__input
+        span.pricing__slider
+      span.pricing__tab--text Annual
+    .pricing__content
+      +pricing("BASIC", "$2.95 ", "1 ", "50 ", "5", "25")
+      +pricing("PLUS", "$5.95 ", "30 ", "250 ", "20", "100")
+      +pricing("PREMIUM", "$13.95 ", "Unlimited ", "500 ", "30", "250")

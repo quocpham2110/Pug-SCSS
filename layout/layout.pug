@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Pug & SCSS
+    link(rel="stylesheet" href!="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap")
+    link(rel="stylesheet" href="css/icon/themify-icons.css")
+    link(rel="stylesheet" href="css/reset.css")
+    link(rel="stylesheet" href="css/style.css")
+    include parts/mixin/mixin.pug
+  body
+    block header
+      include parts/main-part/header.pug
+    block main
+      block nav
+        include parts/main-part/nav.pug
+      block slider
+        include parts/main-part/slider.pug
+      block search
+        include parts/main-part/search.pug
+      block about
+        include parts/main-part/about.pug
+      block partner
+        include parts/main-part/partner.pug
+      block pricing
+        include parts/main-part/pricing.pug
+      block order
+        include parts/main-part/order.pug
+      block features
+        include parts/main-part/features.pug
+      block services
+        include parts/main-part/services.pug
+      block testimonial
+        include parts/main-part/testimonial.pug
+      block blog
+        include parts/main-part/blog.pug
+      block pro
+        include parts/main-part/pro.pug
+    block footer
+      include parts/main-part/footer.pug

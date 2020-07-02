@@ -1,0 +1,47 @@
+@use "info";
+
+.search {
+  margin-top: 10rem;
+  &__inner {
+    text-align: center;
+  }
+  &__box {
+    width: 100%/12 * 10;
+    margin: auto;
+    padding: 7rem;
+    background-image: info.$gradient;
+    color: info.$content-w;
+  }
+  &__form {
+    position: relative;
+    &--input {
+      padding: 2.5rem 2.5rem;
+      width: 100%;
+      border-radius: 0.5rem;
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.6rem;
+      :focus {
+        outline: none;
+      }
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    i {
+      margin-left: 0.5rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+  }
+  &__domain {
+    font-size: 1.8rem;
+    font-weight: 600;
+    @include info.flex();
+    &--items {
+      margin: 1.3rem 1rem 0;
+    }
+  }
+}

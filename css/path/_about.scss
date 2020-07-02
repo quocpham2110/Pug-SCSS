@@ -1,0 +1,48 @@
+@use "info";
+
+.about {
+  &__inner {
+    @include info.grid-C(1fr 1fr 1fr, space-evenly);
+    grid-gap: 0 3rem;
+    padding: 10rem 0;
+  }
+  &__items {
+    text-align: center;
+    box-shadow: info.$shadow;
+    border-radius: 0.5rem;
+    border: solid 0.2rem transparent;
+    margin-bottom: 3rem;
+    padding: 6.5rem 5.5rem 5rem;
+    transition: 0.4s;
+    &:hover {
+      border: solid 0.2rem info.$blue;
+    }
+  }
+  &__box {
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    background-image: info.$gradient;
+    border-radius: 50%;
+    margin-bottom: 2.4rem;
+    text-align: center;
+    line-height: 10rem;
+    //   transition: inherit;
+  }
+  &__img {
+    width: 4rem;
+    max-height: 100%;
+  }
+  &__header {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: info.$blue;
+    font-weight: 700;
+  }
+  &__content {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: info.$content;
+    font-weight: 500;
+  } 
+}

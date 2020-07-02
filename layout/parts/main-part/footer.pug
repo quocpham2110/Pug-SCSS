@@ -1,0 +1,25 @@
+footer.footer
+  .container
+    .footer__top
+      aside.footer__top--col
+        a(href="#").footer__logo
+          img(src="img/logo/logo2.png" alt="").footer__logo--img
+        p.footer__logo--detail SmartHost is a leading web hosting solutions company. Since our founding in 2019, SmartHost has continually innovated.
+        ul.footer__media
+          +media(['facebook', 'twitter-alt', 'linkedin', 'pinterest-alt'])
+      aside.footer__top--col
+        .footer__top--header Useful Links
+        ul
+          +footer-menu(['Support', 'Affiliate', 'Register Domains', 'My Account', 'Privacy Policy'])
+      aside.footer__top--col
+        .footer__top--header Services
+        ul
+          +footer-menu(['Web Hosting', 'Reseller Hosting', 'VPS Hosting', 'VPS Hosting', 'Dedicated Server'])
+      aside.footer__top--col
+        .footer__top--header Contact Us
+        ul
+          +footer('location-pin', '18D, SmartHost hosting, New York, United States - NY')
+          +footer('email', 'your@email.com')
+          +footer('headphone', '(+2) 908 4469 9031')
+    .footer__bot
+      p.footer__bot--content Copyright © 2019 #[a(href="#") SmartHost], All Rights Reserved.<br>Created by Themes_Vila

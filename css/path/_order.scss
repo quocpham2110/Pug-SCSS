@@ -1,0 +1,31 @@
+@use "info";
+
+.order {
+  padding: 4rem 0;
+  background-color: info.$blue-light;
+  &__inner {
+    @include info.grid-C(1fr 1fr);
+  }
+  &__left {
+    padding: 0 1.5rem;
+    margin-top: 0.8ren;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: info.$title;
+  }
+  &__right {
+    padding: 0 1.5rem;
+    text-align: right;
+  }
+  &__text {
+    margin-right: 2.1rem;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: info.$content;
+    span {
+      color: info.$blue;
+      font-weight: bolder;
+    }
+  }
+}

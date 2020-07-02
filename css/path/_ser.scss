@@ -1,0 +1,57 @@
+@use "info";
+
+.ser {
+  margin-bottom: 10rem;
+  &__container {
+    @include info.grid-C(1fr 1fr 1fr);
+    grid-gap: 2.5rem 3rem;
+    text-align: center;
+    margin: 0 -1.5rem;
+  }
+  &__items {
+    position: relative;
+    padding: 4.2rem 2.6rem 2.5rem;
+    box-shadow: info.$shadow;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    &::after {
+      position: absolute;
+      content: "";
+      clear: both;
+      right: -2rem;
+      bottom: -2rem;
+      background-image: info.$gradient;
+      width: 3rem;
+      height: 6rem;
+      transform: rotate(45deg);
+    }
+  }
+  &__icon {
+    $x: 9rem;
+    width: $x;
+    height: $x;
+    line-height: 9rem;
+    margin: 0 2.8rem 3rem 0;
+    background-color: info.$blue-light;
+    border-radius: 50%;
+    float: left;
+    &--img {
+      width: 3.5rem;
+    }
+  }
+  &__text {
+    overflow: hidden;
+    text-align: left;
+    &--title {
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 0.1rem;
+      margin-bottom: 1.6rem;
+      color: info.$title;
+    }
+    &--detail {
+      margin-bottom: 1.6rem;
+      color: info.$content;
+    }
+  }
+}

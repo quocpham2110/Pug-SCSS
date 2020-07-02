@@ -1,0 +1,160 @@
+@use "info";
+
+.slider {
+  z-index: 1;
+  position: relative;
+  height: 65rem;
+  color: info.$content-w;
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: info.$gradient;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+  }
+  &__nav {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    width: 100%;
+    $poss: left, right;
+    @each $pos in $poss {
+      &--#{$pos} {
+        @include info.res("md", max) {
+          display: none;
+        }
+        position: absolute;
+        #{$pos}: 3rem;
+        transform: translate(0, -50%);
+        border-radius: 50%;
+        background-color: info.$content-w;
+        $w: 6rem;
+        width: $w;
+        height: $w;
+        transition: 0.3s;
+        @include info.flex(center, center, row);
+        &:hover {
+          border: solid 0.2rem info.$content-w;
+          background-color: transparent;
+          i {
+            color: info.$content-w;
+          }
+        }
+      }
+    }
+    i {
+      color: info.$blue;
+      font-size: 2rem;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+  }
+  &__inner {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    position: relative;
+  }
+  $number: 1, 2;
+  @each $no in $number {
+    &__#{$no} {
+      @include info.flex();
+      position: absolute;
+      z-index: 2;
+      @if $no == 1 {
+        @include info.animate(slider#{$no}, 10s) {
+          0% {
+            @include info.frame(visible, 1);
+          }
+          25% {
+            @include info.frame(visible, 1);
+          }
+          32% {
+            @include info.frame(hidden, 0);
+          }
+          75% {
+            @include info.frame(hidden, 0);
+          }
+          82% {
+            @include info.frame(visible, 1);
+          }
+          100% {
+            @include info.frame(visible, 1);
+          }
+        }
+      }
+      @if $no == 2 {
+        @include info.animate(slider#{$no}, 10s) {
+          0% {
+            @include info.frame(hidden, 0);
+          }
+          25% {
+            @include info.frame(hidden, 0);
+          }
+          32% {
+            @include info.frame(visible, 1);
+          }
+          75% {
+            @include info.frame(visible, 1);
+          }
+          82% {
+            @include info.frame(hidden, 0);
+          }
+          100% {
+            @include info.frame(hidden, 0);
+          }
+        }
+      }
+    }
+    &__bg#{$no} {
+      flex: 100%/12 * 5;
+      height: inherit;
+      overflow: hidden;
+      @include info.res("lg",max) {
+        display: none;
+      }
+    }
+  }
+  &__text {
+    flex: 100%/12 * 7;
+    padding-left: 4rem;
+    padding-right: 4%;
+    text-align: left;
+    &--title {
+      margin-bottom: 1.5rem;
+      font-size: 4.8rem;
+      font-weight: 700;
+      line-height: 5.8rem;
+      letter-spacing: 0.2rem;
+    }
+    &--promote {
+      margin-bottom: 2.2rem;
+      font-size: 2rem;
+      font-weight: 500;
+      font-style: italic;
+    }
+    &--content {
+      text-transform: capitalize;
+      margin-bottom: 3.5rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+    &--btn {
+      background: transparent;
+      border-color: info.$content-w;
+      border: 0.2rem solid info.$content-w;
+      border-radius: 0.5rem;
+      padding: 1.3rem 3.5rem;
+      color: info.$content-w;
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 0.05rem;
+      transition: 0.5s;
+      &:hover {
+        background: info.$content-w;
+        color: info.$blue;
+      }
+    }
+  }
+}

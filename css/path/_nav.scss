@@ -1,0 +1,97 @@
+@use "info";
+
+.nav {
+  z-index: 10;
+  position: relative;
+  padding: 2rem 0 1.5rem 0;
+  &__inner {
+    @include info.flex(space-between, center, row);
+  }
+  &__logo {
+    width: 14.5rem;
+    &--img {
+      margin-left: 1rem;
+      height: auto;
+    }
+  }
+  &__menu {
+    @include info.flex(flex-end, center, row);
+    @include info.res("md", max) {
+      display: none;
+    }
+    &--items {
+      position: relative;
+      transition: 0.3s;
+      &:hover {
+        & > ul {
+          visibility: visible;
+          opacity: 1;
+          transform: translate(0, -2rem);
+        }
+        & > a {
+          color: info.$blue;
+          &::after {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+    &--link {
+      color: info.$text-menu;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.05rem;
+      margin-left: 4rem;
+      transition: 0.3s;
+    }
+  }
+  &__sub {
+    position: relative;
+    &::after {
+      position: absolute;
+      top: -0.1rem;
+      right: -2rem;
+      font-family: "themify";
+      content: "\e64b";
+      font-size: 10px;
+      transition: 0.2s;
+    }
+    &--list {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      content: "";
+      clear: both;
+      top: 5rem;
+      left: 2rem;
+      width: 20rem;
+      background-color: info.$content-w;
+      transition: 0.3s;
+      box-shadow: info.$shadow;
+      border-radius: 0.5rem;
+      padding: 1.5rem 0 1.5rem 2rem;
+    }
+    &--items {
+      width: 100%;
+      margin-top: 1rem;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:hover {
+        transition: 0.3s;
+        & > a {
+          color: info.$blue;
+          padding: 0.2rem;
+        }
+      }
+    }
+    &--link {
+      width: 100%;
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: 0.05rem;
+      transition: 0.1s;
+      color: info.$text-menu;
+    }
+  }
+}

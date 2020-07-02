@@ -1,0 +1,43 @@
+@use "info";
+
+.pro {
+  position: relative;
+  padding: 15rem 0 10rem;
+  &__bg {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("../img/support/support.jpg");
+    background-size: cover;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+  &__inner {
+    position: relative;
+    text-align: center;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+    width: 50%;
+  }
+  &__title {
+    margin-bottom: 2.5rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: info.$blue;
+    letter-spacing: 0.1rem;
+  }
+  &__detail {
+    margin-bottom: 3.5rem;
+    color: info.$content-w;
+  }
+}
